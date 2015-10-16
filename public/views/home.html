@@ -1,5 +1,49 @@
 <div class="jumbotron text-center">
-	<h1>Home Page 4 Life</h1>
 
-	<p>{{ tagline }}</p>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+  
+<form name="form" id="sign-in-form" ng-submit="submit()" autocomplete="off">
+      <div class="form-group">
+          <label>Frequency</label>
+          <input type="text" class="form-control" name="companyName" ng-model="freq">
+      </div>
+      <div class="form-group">
+          <label>Date Start</label>
+          <input type="text" class="form-control" name="ABN" ng-model="dStart">
+      </div>
+      <div class="form-group">
+          <label>Date Finish</label>
+          <input type="text" class="form-control" name="email" ng-model="dFinish">
+      </div>
+      <div class="form-group">
+          <label>Odometer Start</label>
+          <input type="text" class="form-control" name="email" ng-model="oStart">
+      </div>
+      <div class="form-group">
+          <label>Odometer Finish</label>
+          <input type="text" class="form-control" name="email" ng-model="oFinish">
+      </div>
+      <div class="form-group">
+          <label>Business KM</label>
+          <input type="text" class="form-control" name="email" ng-model="km">
+      </div>
+      <div class="form-group">
+          <label>Average Drive</label>
+          <input type="text" class="form-control" name="email" ng-model="avg">
+      </div>
+
+      <button ng-disabled="form.$invalid" type="submit" class="btn btn-warning btn-lg">Generate</button>
+  </form>
+
+  <hr>
+
+  <p>Already have an account? <a href="/login">Login</a></p>
+  <p>Or go <a href="/">home</a>.</p>
+
+  <div class="text-center">
+  </div>
+  </hr>
+</div>
+</div>
 </div>

@@ -1,3 +1,8 @@
+angular.module('MainCtrl', []).controller('MainController', function($scope) {
+
+	$scope.tagline = 'To the moon and back!';	
+
+});
 angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
@@ -11,3 +16,5 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 	$locationProvider.html5Mode(true);
 
 }]);
+
+angular.module('myApp', ['ngRoute', 'appRoutes', 'MainCtrl']);
