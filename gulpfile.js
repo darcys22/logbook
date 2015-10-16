@@ -28,6 +28,21 @@ gulp.task('copy', [], function() {
             .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('demon', function () {
+  plugins.nodemon({
+    script: 'server.js',
+    ext: 'js'
+    //env: {
+      //'NODE_ENV': 'development'
+    //}
+  })
+    .on('start', ['watch'])
+    //.on('change', ['watch'])
+    .on('restart', function () {
+      console.log('restarted!');
+    });
+});
+
 
 gulp.task('build', ['clean'], function () {
     return gulp.src( [ 'public/index.html' ], {base: 'public'})
