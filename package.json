@@ -1,6 +1,7 @@
 {
   "name": "logbook",
   "main": "server.js",
+  "scripts": { "start": "gulp demon" },
   "dependencies": {
     "express": "~4.5.1",
     "mongoose": "~3.8.0",
