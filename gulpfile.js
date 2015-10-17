@@ -54,7 +54,7 @@ gulp.task('build', ['clean'], function () {
             vendorcss: [plugins.minifyCss(), 'concat', plugins.rev()],
             css: [plugins.minifyCss(), 'concat', plugins.rev()],
             templateCache: [
-                plugins.addSrc(['public/partials/**/*.html']),
+                plugins.addSrc(['public/views/**/*.html']),
                 plugins.debug(),
                 plugins.angularTemplatecache({
                     module: 'myApp',
