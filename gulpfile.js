@@ -24,8 +24,6 @@ gulp.task('notify', ['build'], function() {
 });
 
 gulp.task('copy', [], function() {
-            gulp.src(['public/assets/images/**/*'], {base: 'public'})
-            .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('demon', function () {
@@ -58,7 +56,7 @@ gulp.task('build', ['clean'], function () {
                 plugins.debug(),
                 plugins.angularTemplatecache({
                     module: 'myApp',
-                    root: 'partials/'
+                    root: 'views/'
                 }),
                 'concat',
                 plugins.rev()
