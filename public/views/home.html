@@ -8,14 +8,14 @@
 <div class="row">
   <div class="col-sm-6">
       <div class="form-group">
-          <label>Average Drive</label>
-          <input type="text" class="form-control" name="avg" ng-model="avg">
+          <label>Business KM</label>
+          <input type="text" class="form-control" name="km" ng-model="km">
       </div>
       </div>
   <div class="col-sm-6">
       <div class="form-group">
-          <label>Frequency</label>
-          <input type="text" class="form-control" name="freq" ng-model="freq">
+          <label>Average Drive</label>
+          <input type="text" class="form-control" name="avg" ng-model="avg">
       </div>
       </div>
       </div>
@@ -24,7 +24,7 @@
       <div class="form-group">
         <label>Date Start</label>
         <p class="input-group">
-        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dStart" is-open="status[0].opened" min-date="minDate" max-date="dFinish" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dStart" is-open="status[0].opened" min-date="minDate" max-date="dFinish" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="false" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open(0)"><i class="glyphicon glyphicon-calendar"></i></button>
             </span></p>
@@ -34,7 +34,7 @@
       <div class="form-group">
           <label>Date Finish</label>
         <p class="input-group">
-        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dFinish" is-open="status[1].opened" min-date="dStart" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dFinish" is-open="status[1].opened" min-date="dStart" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="false" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open(1)"><i class="glyphicon glyphicon-calendar"></i></button>
             </span></p>
@@ -56,16 +56,19 @@
       </div>
 </div>
 <div class="row">
-  <div class="col-sm-6">
-      <div class="form-group">
-          <label>Business KM</label>
-          <input type="text" class="form-control" name="km" ng-model="km">
-      </div>
-      </div>
       </div>
 
-      <button ng-disabled="form.$invalid" type="submit" class="btn btn-warning btn-lg">Generate</button>
-  </form>
+      <!--<button ng-disabled="form.$invalid" type="submit" class="btn btn-warning btn-lg">Generate</button>-->
+      <button type="submit" class="btn btn-warning btn-lg">Generate</button>
+    </form>
+
+    <hr>
+    <hr>
+    
+    <div class="text-center">
+      <p>Note: the odometer end and the end date are soft finishes. It will probably generate some numbers past your given figures. This is mostly the fault of the randomiser. If this bothers you change it by hand.</p>
+    </div>
+
 
 
 </div>

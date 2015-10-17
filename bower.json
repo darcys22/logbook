@@ -5,6 +5,7 @@
     "angular": "latest",
     "angular-bootstrap": "~0.14.2",
     "angular-route": "latest",
-    "bootstrap": "latest"
+    "bootstrap": "latest",
+    "moment": "~2.10.6"
   }
 }
